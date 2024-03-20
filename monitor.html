@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+	<head><meta charset="utf-8">
+		<title>IoT Sensor Data</title>
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<!-- Popper JS -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+		<!-- Bootstrap JS -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+		<!-- Thingspeak API -->
+		<script src="https://cdn.thingspeak.com/apps/matlab_visualizations/thingSpeakMatlab.js"></script>
+
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+      
+        <script src="https://code.jquery.com/jquery-3.6.0.js"
+            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+      
+      
+        <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+      
+
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+
+      <!-- Bootstrap JS and jQuery -->
+      <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+      
+      
+        <!-- polyfills -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+      
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+      
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" crossorigin="anonymous"></script>
+        <title>IoT Sensor Monitoring</title>
+        <style>
+            #map {
+                height: 500px;
+            }
+        </style>
+                
+	</head>
+	<body>
+        <!-- Optional JavaScript; choose one of the two! -->
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+<!-- Option 2: Separate Popper and Bootstrap JS -->
+<!--
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+-->
+
+
+		<div class="container-fluid mt-3">
+            <h1 class="text-center my-4">YOUR REALTIME DATA</h1>
+			<div class="tab-content">
+				<div id="sensorDataTab" class="tab-pane fade show active">
+					<div class="row mt-3">
+						<div class="col-md-3">
+							<div class="card border-primary">
+								<div class="card-body">
+									<h5 class="card-title">Temperature</h5>
+									<p class="card-text">Value: <span id="sensor1Value"></span>°C</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="card border-primary">
+								<div class="card-body">
+									<h5 class="card-title">PULSE</h5>
+									<p class="card-text">Value: <span id="sensor2Value"></span>beats/minute</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="card border-primary">
+								<div class="card-body">
+									<h5 class="card-title">spO2</h5>
+									<p class="card-text">Value: <span id="sensor3Value"></span>%</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="card border-primary">
+								<div class="card-body">
+									<h5 class="card-title">MUSCLE CONTRACTION</h5>
+									<p class="card-text">Value: <span id="sensor4Value"></span></p>
+								</div>
+							</div>
+						</div>
+					</div>
+                </div>
+            </div> 
+                <div class="tab-pane fade show active">
+                  <canvas id="sensorGraph"></canvas>
+                </div>
+    
+            </div>           
+        </div>
+
+            
+        <!-- jQuery and Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+        <script type="text/javascript">
+            // Thingspeak API Key and Channel ID
+            var apiKey = "B9TWP9MP0BV88Z6A";
+            var channelId = " 2465156";
+    
+            // Function to fetch Sensor Data from Thingspeak
+            function fetchSensorData(sensor) {
+                $.getJSON("https://api.thingspeak.com/channels/" + channelId + "/fields/" + sensor + ".json?results=2", function(data) {
+                    var feeds = data.feeds;
+                    var latestFeed = feeds[1];
+                    var field = "field" + sensor;
+                    var fieldValue = latestFeed[field];
+                    var date = latestFeed.created_at;
+    
+                    $("#sensor" + sensor + "Value").text(fieldValue);
+                    $("#sensor" + sensor + "Date").text(date);
+                });
+            }
+            // Function to initialize Sensor Data
+            function initializeSensorData() {
+                fetchSensorData(1);
+                fetchSensorData(2);
+                fetchSensorData(3);
+                fetchSensorData(4);
+            }
+    
+            $(document).ready(function() {
+                initializeSensorData();
+                initializeThresholds();
+    
+                // Fetch Sensor Data every 10 seconds
+                setInterval(function() {
+                    fetchSensorData(1);
+                    fetchSensorData(2);
+                    fetchSensorData(3);
+                    fetchSensorData(4);
+                },1000);
+
+            });    
+	</script>
+  
+  <!-- jQuery and Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    $(document).ready(function() {
+  // Fetch sensor data from ThingSpeak
+  // Replace <YOUR_THINGSPEAK_API_KEY> with your actual ThingSpeak API key
+  $.getJSON('https://api.thingspeak.com/channels/2465156/feeds.json?api_key=B9TWP9MP0BV88Z6A&results=2', function(data) {
+    
+    var sensor1Data = [];
+    var sensor2Data = [];
+    var sensor3Data = [];
+    var sensor4Data = [];
+    var labels = [];
+
+    // Extract data from the response
+    for (var i = 0; i < data.feeds.length; i++) {
+      var feed = data.feeds[i];
+      var sensor1Value = parseFloat(feed.field1); // Assuming sensor 1 data is stored in field1
+      var sensor2Value = parseFloat(feed.field2); // Assuming sensor 2 data is stored in field2
+      var sensor3Value = parseFloat(feed.field3); // Assuming sensor 3 data is stored in field3
+      var sensor4Value = parseFloat(feed.field4); // Assuming sensor 4 data is stored in field4
+
+      sensor1Data.push(sensor1Value);
+      sensor2Data.push(sensor2Value);
+      sensor3Data.push(sensor3Value);
+      sensor4Data.push(sensor4Value);
+
+      // Generate time labels with a 5-minute interval
+      var timestamp = new Date(feed.created_at);
+      var minutes = timestamp.getMinutes();
+      var roundedMinutes = Math.floor(minutes / 5) * 5; // Round down to the nearest multiple of 5
+      timestamp.setMinutes(roundedMinutes, 0, 0);
+      var label = timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+      labels.push(label);
+    }
+
+    // Create a chart using Chart.js
+    var ctx = document.getElementById('sensorGraph').getContext('2d');
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: labels,
+        datasets: [
+          {
+            label: 'TEMPERATURE(°C)',
+            data: sensor1Data,
+            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+            borderColor: 'rgba(75, 192, 192, 1)',
+            borderWidth: 1
+          },
+          {
+            label: 'PULSE',
+            data: sensor2Data,
+            backgroundColor: 'rgba(192, 75, 192, 0.2)',
+            borderColor: 'rgba(192, 75, 192, 1)',
+            borderWidth: 1
+          },
+          {
+            label: 'SPO2',
+            data: sensor3Data,
+            backgroundColor: 'rgba(192, 192, 75, 0.2)',
+            borderColor: 'rgba(192, 192, 75, 1)',
+            borderWidth: 1
+          },
+          {
+            label: 'MUSCLE CONTRACTION',
+            data: sensor4Data,
+            backgroundColor: 'rgba(75, 75, 192, 0.2)',
+            borderColor: 'rgba(75, 75, 192, 1)',
+            borderWidth: 1
+          }
+        ]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  });
+});
+// Function to add a new sensor to the sensor table
+  </script>        
+
+</body>
+</html>
