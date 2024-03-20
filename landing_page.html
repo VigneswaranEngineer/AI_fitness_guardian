@@ -10,8 +10,10 @@
 </head>
 
 <body>
-
     <style>
+        .navbar {
+            background-image: linear-gradient(#67C6E3, #FF8E8F);
+        }
         
         .nav-heading {
             font-family: "monoton";
@@ -56,6 +58,11 @@
         
         }
         
+        .button-container {
+            background-color: #98E4FF;
+        
+        }
+        
         .home-paragragh-container {
         
             background-color: #67C6E3;
@@ -67,6 +74,421 @@
             border-color: #E6BAA3;
             padding: 20px;
         }
+        
+        .loginpage-container {
+            background-color: #DFF5FF;
+        
+        }
+        
+        .signup-button {
+            color: white;
+            background-color: #401F71;
+            width: 130px;
+            height: 45px;
+            border-width: 0;
+            border-radius: 8px;
+            margin-right: 10px;
+        }
+        
+        
+        .body {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        
+        .form-container {
+            width: 350px;
+            height: 550px;
+            background-color: #DFF5FF;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            border-radius: 10px;
+            box-sizing: border-box;
+            padding: 20px 30px;
+        }
+        
+        .title {
+            text-align: center;
+            font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+                "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+            margin: 10px 0 30px 0;
+            font-size: 28px;
+            font-weight: 800;
+        }
+        
+        .sub-title {
+            margin: 0;
+            margin-bottom: 5px;
+            font-size: 9px;
+            font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+                "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        }
+        
+        .form {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            margin-bottom: 15px;
+        }
+        
+        .input {
+            border-radius: 20px;
+            border: 1px solid #c0c0c0;
+            outline: 0 !important;
+            box-sizing: border-box;
+            padding: 12px 15px;
+        }
+        
+        .form-btn {
+            padding: 10px 15px;
+            font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+                "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+            border-radius: 20px;
+            border: 0 !important;
+            outline: 0 !important;
+            background: teal;
+            color: white;
+            cursor: pointer;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+        
+        .form-btn:active {
+            box-shadow: none;
+        }
+        
+        .sign-up-label {
+            margin: 0;
+            font-size: 10px;
+            color: #747474;
+            font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+                "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        }
+        
+        .sign-up-link {
+            margin-left: 1px;
+            font-size: 11px;
+            text-decoration: underline;
+            text-decoration-color: teal;
+            color: teal;
+            cursor: pointer;
+            font-weight: 800;
+        }
+        
+        .buttons-container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            margin-top: 20px;
+            gap: 15px;
+        }
+        
+        .apple-login-button,
+        .google-login-button {
+            border-radius: 20px;
+            box-sizing: border-box;
+            padding: 10px 15px;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+                rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+                "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+            font-size: 11px;
+            gap: 5px;
+        }
+        
+        .apple-login-button {
+            background-color: #DFF5FF;
+            color: #fff;
+            border: 2px solid #000;
+        }
+        
+        .google-login-button {
+            border: 2px solid #747474;
+        }
+        
+        .apple-icon,
+        .google-icon {
+            font-size: 18px;
+            margin-bottom: 1px;
+        }
+        
+        
+        
+        .body1 {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        
+        .form-container {
+            width: 350px;
+            background-color: #fff;
+            padding: 32px 24px;
+            font-size: 14px;
+            font-family: inherit;
+            color: #212121;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            box-sizing: border-box;
+            border-radius: 10px;
+            box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.084), 0px 2px 3px rgba(0, 0, 0, 0.168);
+        }
+        
+        .form-container button:active {
+            scale: 0.95;
+        }
+        
+        .form-container .logo-container {
+            margin-bottom: 12px;
+            text-align: center;
+            font-weight: 700;
+            font-size: 20px;
+        }
+        
+        .form-container .social-buttons {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            flex-direction: column;
+            gap: 12px;
+            align-items: center;
+        }
+        
+        .form-container .social-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            font-family: inherit;
+            color: #fff;
+            border: none;
+            padding: 12px 16px;
+            gap: 8px;
+            cursor: pointer;
+            border-radius: 6px;
+            box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.084), 0px 2px 3px rgba(0, 0, 0, 0.168);
+        }
+        
+        .form-container .social-button svg {
+            width: 22px;
+            height: 22px;
+            fill: white;
+        }
+        
+        .form-container .social-button.facebook {
+            background-color: #1778f2;
+        }
+        
+        .form-container .social-button.apple {
+            background-color: #212121;
+        }
+        
+        .form-container .form {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .form-container .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+        
+        .form-container .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .form-container .form-group input[type="text"],
+        .form-container .form-group input[type="password"] {
+            width: 90%;
+            padding: 12px 16px;
+            border-radius: 6px;
+            font-family: inherit;
+            border: 1px solid #ccc;
+        }
+        
+        .form-container .form-group input::placeholder {
+            opacity: 0.5;
+        }
+        
+        .form-container .form-group input[type="text"]:focus,
+        .form-container .form-group input[type="password"]:focus {
+            outline: none;
+            border-color: #1778f2;
+        }
+        
+        .form-container .form-submit-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: inherit;
+            color: #fff;
+            background-color: #212121;
+            border: none;
+            width: 100%;
+            padding: 12px 16px;
+            font-size: inherit;
+            gap: 8px;
+            margin: 12px 0;
+            cursor: pointer;
+            border-radius: 6px;
+            box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.084), 0px 2px 3px rgba(0, 0, 0, 0.168);
+        }
+        
+        .form-container .form-submit-btn:hover {
+            background-color: #313131;
+        }
+        
+        .form-container .link {
+            color: #1778f2;
+            text-decoration: none;
+        }
+        
+        .form-container .forgot-password-link {
+            align-self: flex-end;
+            margin-top: -20px;
+        }
+        
+        .form-container .signup-link {
+            align-self: center;
+            font-weight: 500;
+        }
+        
+        .form-container .signup-link .link {
+            font-weight: 400;
+        }
+        
+        .form-container .link:hover {
+            text-decoration: underline;
+        }
+        
+        .form-container .line {
+            width: 100%;
+            height: 1px;
+            background-color: #212121;
+            opacity: 0.1;
+        }
+        
+        
+        .live-data-bg-container {
+            background-image: linear-gradient(#BBE2EC, #40A2E3);
+        }
+        
+        .live-heading {
+            color: #5E1675;
+            font-family: "bree Serif";
+            font-size: 30px;
+            font-style: italic;
+            font-weight: 1000;
+        }
+        
+        .oxygen-heading {
+            color: #0D9276;
+        }
+        
+        .pulse-heading {
+            color: #D24545;
+        }
+        
+        .temp-heading {
+            color: #503C3C;
+        }
+        
+        .fitx {
+            font-family: "monoton";
+            font-size: 35px;
+            font-weight: 500;
+            padding-right: 10px;
+        }
+        
+        .check-button {
+            height: 5vh;
+            width: 20vw;
+            text-align: center;
+            background-color: #176B87;
+            color: white;
+            font-size: 18px;
+            font-family: "roboto";
+            border-radius: 10px;
+            border-width: 0px;
+        }
+        
+        .time-heading {
+            color: #11235A;
+            font-size: 26px;
+            font-family: "roboto";
+            font-style: bold;
+            font-weight: 1000;
+        }
+        
+        .time-container {
+            height: 20vh;
+        
+            background-color: #5272F2;
+        }
+        
+        .time-input {
+            height: 5vh;
+            background-color: #B4D4FF;
+            border-radius: 8px;
+            border-width: 4px;
+            border-color: #F2AFEF;
+        }
+        
+        .oxygen-container {
+            background-color: #9ADE7B;
+            height: 20vh;
+            border-radius: 6px;
+            color: #0766AD;
+        
+        }
+        
+        .oxygen {
+            color: #0766AD;
+            font-size: 28px;
+            font-family: "roboto";
+            font-style: bold;
+            font-weight: 1000;
+        }
+        
+        .pulse-container {
+            background-color: #FF8F8F;
+            height: 20vh;
+            border-radius: 6px;
+        
+        }
+        
+        .pulse {
+            color: #363062;
+            font-size: 26px;
+            font-family: "roboto";
+            font-style: bold;
+            font-weight: 1000;
+        }
+        
+        .temp-container {
+            background-color: #B0926A;
+            height: 20vh;
+            border-radius: 6px;
+        
+        }
+        
+        .temperature {
+            color: #0C356A;
+            font-size: 26px;
+            font-family: "roboto";
+            font-style: bold;
+            font-weight: 1000;
+        }
+        
+        .colse-style {
+            font-size: 40px;
+        }
+        
         
         .bg-container {
             background-color: #F7EEDD;
@@ -199,6 +621,9 @@
             margin-top: 20px;
         }
     </style>
+
+
+
     <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
         <div class="container">
             <a class="navbar-brand nav-heading" href="#">
@@ -214,7 +639,8 @@
                         <span class="sr-only">(current)</span>
                     </a>
                     <a class="nav-link" href="#About" id="navItem2">About Us</a>
-                    <a class="nav-link" href="#contactus" id="navItem4">Contact Us</a>
+                    <a class="nav-link" href="#contactus" id="navItem3">Contact Us</a>
+                    <a class="nav-link" href="#login" id="navItem4">Login</a>
                 </div>
             </div>
         </div>
@@ -224,7 +650,7 @@
             <div class="row">
                 <div class="col-12">
                     <h1 class="welcome-home-page mt-5 pt-4">Welcome to FitX!!</h1>
-                    <div class="home-paragragh-container">
+                    <div class="home-paragragh-container m-3">
                         <p class="home-page-paragraph">Our ultimate destination for cutting-edge fitness
                             monitoring solutions! Say goodbye to generic fitness
                             trackers and hello to personalized health insights tailored just for you.
@@ -236,49 +662,108 @@
         </div>
     </div>
 
-    <div>
-        <center>
-        <style>
-            button {
-                width: 165px;
-                height: 62px;
-                cursor: pointer;
-                color: #fff;
-                font-size: 17px;
-                border-radius: 1rem;
-                border: none;
-                position: relative;
-                background: #100720;
-                transition: 0.1s;
-              }
-              
-              button::after {
-                content: '';
-                width: 100%;
-                height: 100%;
-                background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,94,247,1) 17.8%, rgba(2,245,255,1) 100.2% );
-                filter: blur(15px);
-                z-index: -1;
-                position: absolute;
-                left: 0;
-                top: 0;
-              }
-              
-              button:active {
-                transform: scale(0.9) rotate(3deg);
-                background: radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,94,247,1) 17.8%, rgba(2,245,255,1) 100.2% );
-                transition: 0.5s;
-              }
-        </style>
-        <button>
-            SIGN UP
-          </button>
-        <button>
-            LOGIN
-          </button>
-        </center>
-    </div>
+    <div id="login">
 
+        <div id="sectionloginandsignup">
+
+            <div class="loginpage-container d-flex flex-row justify-content-center p-3">
+
+                <button class="signup-button" onclick="display('sectionlogin')">Login</button>
+                <button class="signup-button" onclick="display('sectionsignup')">signup</button>
+            </div>
+
+
+        </div>
+
+        <div id="sectionsignup">
+            <div class="d-flex flex-row justify-content-center m-3">
+                <div class="form-container">
+                    <div>
+                        <button type="button" class="close text-right" aria-label="Close" onclick="display('sectionloginandsignup')">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <p class="title">Create account</p>
+
+                    </div>
+                    <p class="sub-title">Let's get started with your 30 days free trial</p>
+                    <form class="form">
+                        <input type="text" class="input" placeholder="Name">
+                        <input type="email" class="input" placeholder="Email">
+                        <input type="password" class="input" placeholder="Password">
+                        <button class="form-btn">Create account</button>
+                    </form>
+                    <p class="sign-up-label">
+                        Already have an account?<span class="sign-up-link" onclick="display('sectionlogin')">Log in</span>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        <div id="sectionlogin">
+            <div class="d-flex flex-row justify-content-center m-3">
+                <div class="form-container">
+                    <div class="logo-container">
+                        Welcome Back!
+                        <button type="button" class="close text-right" aria-label="Close" onclick="display('sectionloginandsignup')">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+
+                    <div class="line"></div>
+                    <form class="form">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input required="" placeholder="Enter your email" name="email" id="email" type="text">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input required="" name="password" placeholder="Enter your password" id="password" type="password">
+                        </div>
+                        <button type="submit" class="form-submit-btn">Sign In</button>
+                    </form>
+
+                    <a class="forgot-password-link link" href="#">Forgot Password</a>
+
+                    <p class="signup-link">
+                        Don't have an account?
+                        <a class="signup-link link" href="#" onclick="display('sectionsignup')"> Sign up now</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+       
+
+
+        </div>
+        <div id="sectiontime">
+            <div class="time-container d-flex flex-column justify-content-center p-3 m-2">
+                <button type="button" class="close colse-style m-2 text-right" aria-label="Close" onclick="display('sectionloginandsignup')">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h1 class="time-heading m-2">Time:</h1>
+
+                <input class="time-input m-2" type="time" />
+            </div>
+            <div class="d-flex flex-row justify-content-center m-2 p-3">
+                <div class="oxygen-container m-2 p-4">
+                    <h1 class="oxygen">SPO2:</h1>
+                </div>
+                <div class="pulse-container m-2 p-4">
+                    <h1 class="pulse">Pulse Rate:</h1>
+                </div>
+                <div class="temp-container m-2 p-4">
+                    <h1 class="temperature">Temparature Level:</h1>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/js/ccbp-ui-kit.js"></script>
+
+    </div>
     <div class="bg-container" id="About">
         <div class="container">
             <div class="row">
@@ -309,7 +794,7 @@
                         seamlessly connecting with our user-friendly mobile application
                         via MQTT communication.
                     </p>
-                    <h5 class="integration-heading">Integration with AI!!</span></h5>
+                    <h5 class="integration-heading">Integration with AI!!</h5>
                     <p class="integration-para">
                         What sets us apart is our integration of a Linear Regression model,
                         a sophisticated AI algorithm that analyzes user-specific data accumulated
@@ -345,6 +830,11 @@
         </div>
 
     </div>
-</div>
+
+    <div>
+
+    </div>
+
 </body>
+
 </html>
